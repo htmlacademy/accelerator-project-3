@@ -1,21 +1,149 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <link rel="preload" href="fonts/Manrope-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" crossorigin="anonymous">
+  <title>Internship</title>
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
+<body class="page-body">
+  <div class="wrapper">
+    <div class="overlay"></div>
+    <h1 class="visually-hidden">Проект Стажировка</h1>
+    <header class="page-header">
+      <div class="page-header__head">
+        <div class="page-header__logo">
+          <img width="30" height="30" src="img/svg/logo.svg" alt="логотип проекта Стажировка.">
+        </div>
+        <nav class="page-header__nav nav" aria-label="Primary">
+          <div class="burger-menu">
+            <button class="burger-button btn btn--menu"><b>Меню</b><span></span></button>
+            <ul class="menu">
+              <li><a href="#about">О проекте</a></li>
+              <li>
+                <a href="#programs">Программы</a>
+                <ul class="submenu">
+                  <li><a href="#">Стажировки</a></li>
+                  <li><a href="#">Волонтёрство</a></li>
+                  <li><a href="#">Учёба</a></li>
+                  <li><a href="#">Религия</a></li>
+                </ul>
+              </li>
+              <li><a href="#info">Как поехать</a></li>
+              <li><a href="#reviews">Отзывы</a></li>
+              <li>
+                <a href="#news">Новости</a>
+                <ul class="submenu">
+                  <li><a href="#">Общее</a></li>
+                  <li><a href="#">Волонтерство</a></li>
+                  <li><a href="#">Стажировки</a></li>
+                  <li><a href="#">Карьера</a></li>
+                  <li><a href="#">Путешествия</a></li>
+                </ul>
+              </li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <section class="page-header__hero hero" data-test="hero">
+        <h2 class="visually-hidden">Программы проекта Стажировка</h2>
+        <div class="hero__slider swiper">
+          <div class="hero__wrapper swiper__wrapper">
+            <div class="hero__slide hero-slide swiper-slide">
+              <picture>
+                <!-- mobile -->
+                <source width="" height="" type="image/webp" media="(max-width: 767px)"
+                  srcset="img/hero/item-1-mobile.webp 1x, img/hero/item-1-mobile@2x.webp 2x">
+                <source width="" height="" type="image/jpeg" media="(max-width: 767px)"
+                  srcset="img/hero/item-1-mobile.jpg 1x, img/hero/item-1-mobile@2x.jpg 2x">
+                <!-- tablet -->
+                <source width="" height="" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
+                  srcset="img/hero/item-1-tablet.webp 1x, img/hero/item-1-tablet@2x.webp 2x">
+                <source width="" height="" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
+                  srcset="img/hero/item-1-tablet.jpg 1x, img/hero/item-1-tablet@2x.jpg 2x">
+                <!-- desktop -->
+                <source width="" height="" type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/hero/item-1-desktop.webp 1x, img/hero/item-1-desktop@2x.webp 2x">
+                <img width="" height="" src="img/hero/item-1-desktop.jpg" srcset="img/hero/item-1-desktop@2x.jpg 2x"
+                  alt="Глобальный профессиональный
+опыт обучения за рубежом.">
+              </picture>
+              <div class="hero-slide__content container">
+                <h3>Глобальный профессиональный
+                  опыт обучения за рубежом</h3>
+                <p>Погрузитесь в академическую программу, проходя
+                  практику в разных городах, ощущая настоящий
+                  студенческий стиль жизни!</p>
+                <a class="hero-slide__btn btn btn--link" href="#"><b>подробнее</b><span></span></a>
+              </div>
+            </div>
+            <div class="hero__slide hero-slide swiper-slide">
+              <picture>
+                <!-- mobile -->
+                <source width="" height="" type="image/webp" media="(max-width: 767px)"
+                  srcset="img/hero/item-2-mobile.webp 1x, img/hero/item-2-mobile@2x.webp 2x">
+                <source width="" height="" type="image/jpeg" media="(max-width: 767px)"
+                  srcset="img/hero/item-2-mobile.jpg 1x, img/hero/item-2-mobile@2x.jpg 2x">
+                <!-- tablet -->
+                <source width="" height="" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
+                  srcset="img/hero/item-2-tablet.webp 1x, img/hero/item-2-tablet@2x.webp 2x">
+                <source width="" height="" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
+                  srcset="img/hero/item-2-tablet.jpg 1x, img/hero/item-2-tablet@2x.jpg 2x">
+                <!-- desktop -->
+                <source width="" height="" type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/hero/item-2-desktop.webp 1x, img/hero/item-2-desktop@2x.webp 2x">
+                <img width="" height="" src="img/hero/item-2-desktop.jpg" srcset="img/hero/item-2-desktop@2x.jpg 2x"
+                  alt="Волонтёрские программы –
+внесите свой вклад в общество.">
+              </picture>
+              <div class="hero-slide__content container">
+                <h3>Волонтёрские программы –
+                  внесите свой вклад в общество</h3>
+                <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
+                </p>
+                <a class="hero-slide__btn btn btn--link" href="#"><b>подробнее</b><span></span></a>
+              </div>
+            </div>
+            <div class="hero__slide hero-slide swiper-slide">
+              <picture>
+                <!-- mobile -->
+                <source width="" height="" type="image/webp" media="(max-width: 767px)"
+                  srcset="img/hero/item-3-mobile.webp 1x, img/hero/item-3-mobile@2x.webp 2x">
+                <source width="" height="" type="image/jpeg" media="(max-width: 767px)"
+                  srcset="img/hero/item-3-mobile.jpg 1x, img/hero/item-3-mobile@2x.jpg 2x">
+                <!-- tablet -->
+                <source width="" height="" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
+                  srcset="img/hero/item-3-tablet.webp 1x, img/hero/item-3-tablet@2x.webp 2x">
+                <source width="" height="" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
+                  srcset="img/hero/item-3-tablet.jpg 1x, img/hero/item-3-tablet@2x.jpg 2x">
+                <!-- desktop -->
+                <source width="" height="" type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/hero/item-3-desktop.webp 1x, img/hero/item-3-desktop@2x.webp 2x">
+                <img width="" height="" src="img/hero/item-3-desktop.jpg" srcset="img/hero/item-3-desktop@2x.jpg 2x"
+                  alt="Программы стажировок
+в крупнейших компаниях мира.">
+              </picture>
+              <div class="hero-slide__content container">
+                <h3>Программы стажировок
+                  в крупнейших компаниях мира</h3>
+                <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                <a class="hero-slide__btn btn btn--link" href="#"><b>подробнее</b><span></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__container container">
+          <div class="hero__slider-pagination"></div>
+        </div>
+      </section>
+    </header>
     <div data-test="about">about</div>
     <div data-test="programs">programs</div>
     <div data-test="grant">grant</div>
@@ -25,7 +153,8 @@
     <div data-test="contacts">contacts</div>
     <div data-test="form">form</div>
     <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>
