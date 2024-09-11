@@ -1,6 +1,6 @@
 const initBurgerMenu = () => {
-  const burgerButton = document.querySelector('.burger-button');
-  const menu = document.querySelector('.menu');
+  const burgerButton = document.querySelector('[data-element="burger-button"]');
+  const menu = document.querySelector('[data-element="menu"]');
   const body = document.body;
   const overlay = document.querySelector('.overlay');
 
@@ -20,7 +20,7 @@ const initBurgerMenu = () => {
 
   burgerButton.addEventListener('click', toggleMenu);
 
-  menu.addEventListener('click', event => {
+  menu.addEventListener('click', (event) => {
     const target = event.target;
     const submenu = target.nextElementSibling;
 
@@ -34,11 +34,11 @@ const initBurgerMenu = () => {
 
   overlay.addEventListener('click', closeMenu);
 
-  document.addEventListener('keydown', event => {
+  document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       closeMenu();
     }
   });
 };
 
-export { initBurgerMenu }
+export { initBurgerMenu };
