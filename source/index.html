@@ -54,93 +54,118 @@
       </div>
       <section class="page-header__hero hero" data-test="hero">
         <h2 class="visually-hidden">Программы проекта Стажировка</h2>
-        <div class="hero__slider swiper">
-          <div class="hero__wrapper swiper__wrapper">
+        <div class="hero__slider-pagination"></div>
+        <div class="hero__slider swiper" data-slider="hero-slider">
+          <div class="hero__wrapper swiper-wrapper">
             <div class="hero__slide hero-slide swiper-slide">
               <picture>
                 <!-- mobile -->
-                <source width="" height="" type="image/webp" media="(max-width: 767px)"
+                <source width="320" height="568" type="image/webp" media="(max-width: 767px)"
                   srcset="img/hero/item-1-mobile.webp 1x, img/hero/item-1-mobile@2x.webp 2x">
-                <source width="" height="" type="image/jpeg" media="(max-width: 767px)"
+                <source width="320" height="568" type="image/jpeg" media="(max-width: 767px)"
                   srcset="img/hero/item-1-mobile.jpg 1x, img/hero/item-1-mobile@2x.jpg 2x">
                 <!-- tablet -->
-                <source width="" height="" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
+                <source width="768" height="1024" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
                   srcset="img/hero/item-1-tablet.webp 1x, img/hero/item-1-tablet@2x.webp 2x">
-                <source width="" height="" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
+                <source width="768" height="1024" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
                   srcset="img/hero/item-1-tablet.jpg 1x, img/hero/item-1-tablet@2x.jpg 2x">
                 <!-- desktop -->
-                <source width="" height="" type="image/webp" media="(min-width: 1440px)"
+                <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)"
                   srcset="img/hero/item-1-desktop.webp 1x, img/hero/item-1-desktop@2x.webp 2x">
-                <img width="" height="" src="img/hero/item-1-desktop.jpg" srcset="img/hero/item-1-desktop@2x.jpg 2x"
-                  alt="Глобальный профессиональный
+                <img width="1440" height="800" src="img/hero/item-1-desktop.jpg"
+                  srcset="img/hero/item-1-desktop@2x.jpg 2x" alt="Глобальный профессиональный
 опыт обучения за рубежом.">
               </picture>
               <div class="hero-slide__content container">
-                <h3>Глобальный профессиональный
-                  опыт обучения за рубежом</h3>
-                <p>Погрузитесь в академическую программу, проходя
-                  практику в разных городах, ощущая настоящий
-                  студенческий стиль жизни!</p>
-                <a class="hero-slide__btn btn btn--link" href="#"><b>подробнее</b><span></span></a>
+                <div class="hero-slide__head">
+                  <h3>Глобальный профессиональный
+                    опыт обучения за рубежом</h3>
+                </div>
+                <div class="hero-slide__row">
+                  <div class="hero-slide__col hero-slide__col--text">
+                    <p>Погрузитесь в академическую программу, проходя
+                      практику в разных городах, ощущая настоящий
+                      студенческий стиль жизни!
+                    </p>
+                  </div>
+                  <div class="hero-slide__col hero-slide__col--link">
+                    <a class="hero-slide__btn btn btn--link" href="#"><b>подробнее</b><span></span></a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="hero__slide hero-slide swiper-slide">
               <picture>
                 <!-- mobile -->
-                <source width="" height="" type="image/webp" media="(max-width: 767px)"
+                <source width="320" height="568" type="image/webp" media="(max-width: 767px)"
                   srcset="img/hero/item-2-mobile.webp 1x, img/hero/item-2-mobile@2x.webp 2x">
-                <source width="" height="" type="image/jpeg" media="(max-width: 767px)"
+                <source width="320" height="568" type="image/jpeg" media="(max-width: 767px)"
                   srcset="img/hero/item-2-mobile.jpg 1x, img/hero/item-2-mobile@2x.jpg 2x">
                 <!-- tablet -->
-                <source width="" height="" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
+                <source width="768" height="1024" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
                   srcset="img/hero/item-2-tablet.webp 1x, img/hero/item-2-tablet@2x.webp 2x">
-                <source width="" height="" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
+                <source width="768" height="1024" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
                   srcset="img/hero/item-2-tablet.jpg 1x, img/hero/item-2-tablet@2x.jpg 2x">
                 <!-- desktop -->
-                <source width="" height="" type="image/webp" media="(min-width: 1440px)"
+                <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)"
                   srcset="img/hero/item-2-desktop.webp 1x, img/hero/item-2-desktop@2x.webp 2x">
-                <img width="" height="" src="img/hero/item-2-desktop.jpg" srcset="img/hero/item-2-desktop@2x.jpg 2x"
-                  alt="Волонтёрские программы –
+                <img width="1440" height="800" src="img/hero/item-2-desktop.jpg"
+                  srcset="img/hero/item-2-desktop@2x.jpg 2x" alt="Волонтёрские программы –
 внесите свой вклад в общество.">
               </picture>
               <div class="hero-slide__content container">
-                <h3>Волонтёрские программы –
-                  внесите свой вклад в общество</h3>
-                <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
-                </p>
-                <a class="hero-slide__btn btn btn--link" href="#"><b>подробнее</b><span></span></a>
+                <div class="hero-slide__head">
+                  <h3>Волонтёрские программы –
+                    внесите свой вклад в общество</h3>
+                </div>
+                <div class="hero-slide__row">
+                  <div class="hero-slide__col hero-slide__col--text">
+                    <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни
+                      и другое.
+                    </p>
+                  </div>
+                  <div class="hero-slide__col hero-slide__col--link">
+                    <a class="hero-slide__btn btn btn--link" href="#"><b>подробнее</b><span></span></a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="hero__slide hero-slide swiper-slide">
               <picture>
                 <!-- mobile -->
-                <source width="" height="" type="image/webp" media="(max-width: 767px)"
+                <source width="320" height="568" type="image/webp" media="(max-width: 767px)"
                   srcset="img/hero/item-3-mobile.webp 1x, img/hero/item-3-mobile@2x.webp 2x">
-                <source width="" height="" type="image/jpeg" media="(max-width: 767px)"
+                <source width="320" height="568" type="image/jpeg" media="(max-width: 767px)"
                   srcset="img/hero/item-3-mobile.jpg 1x, img/hero/item-3-mobile@2x.jpg 2x">
                 <!-- tablet -->
-                <source width="" height="" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
+                <source width="768" height="1024" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
                   srcset="img/hero/item-3-tablet.webp 1x, img/hero/item-3-tablet@2x.webp 2x">
-                <source width="" height="" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
+                <source width="768" height="1024" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
                   srcset="img/hero/item-3-tablet.jpg 1x, img/hero/item-3-tablet@2x.jpg 2x">
                 <!-- desktop -->
-                <source width="" height="" type="image/webp" media="(min-width: 1440px)"
+                <source width="1440" height="800" type="image/webp" media="(min-width: 1440px)"
                   srcset="img/hero/item-3-desktop.webp 1x, img/hero/item-3-desktop@2x.webp 2x">
-                <img width="" height="" src="img/hero/item-3-desktop.jpg" srcset="img/hero/item-3-desktop@2x.jpg 2x"
-                  alt="Программы стажировок
+                <img width="1440" height="800" src="img/hero/item-3-desktop.jpg"
+                  srcset="img/hero/item-3-desktop@2x.jpg 2x" alt="Программы стажировок
 в крупнейших компаниях мира.">
               </picture>
               <div class="hero-slide__content container">
-                <h3>Программы стажировок
-                  в крупнейших компаниях мира</h3>
-                <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-                <a class="hero-slide__btn btn btn--link" href="#"><b>подробнее</b><span></span></a>
+                <div class="hero-slide__head">
+                  <h3>Программы стажировок
+                    в крупнейших компаниях мира</h3>
+                </div>
+                <div class="hero-slide__row">
+                  <div class="hero-slide__col hero-slide__col--text">
+                    <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.
+                    </p>
+                  </div>
+                  <div class="hero-slide__col hero-slide__col--link">
+                    <a class="hero-slide__btn btn btn--link" href="#"><b>подробнее</b><span></span></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="hero__container container">
-          <div class="hero__slider-pagination"></div>
         </div>
       </section>
     </header>

@@ -1,3 +1,241 @@
+.hero-slide.swiper-slide {
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+  min-height: 800px;
+  padding-top: 433px;
+  background-color: $color-action;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: $color-overlay;
+  }
+
+  @include vp-1439 {
+    padding-top: 687px;
+  }
+
+  @include vp-767 {
+    padding-top: 229px;
+    padding-bottom: 20px;
+  }
+}
+
+.hero-slide picture {
+  font-size: 0;
+  line-height: 0;
+}
+
+.hero-slide > picture img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.hero-slide__content {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+}
+
+.hero-slide__head {
+  width: 100%;
+  max-width: 968px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 0 30px 30px 0;
+  background-color: $color-white;
+
+  @include vp-1439 {
+    max-width: 659px;
+    padding-top: 30px;
+    padding-bottom: 24px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    padding-left: 14px;
+    padding-right: 15px;
+    border-radius: 0 16px 16px 0;
+  }
+}
+
+.hero-slide__head h3 {
+  margin: 0;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 62px;
+  color: $color-action;
+
+  @include vp-1439 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 26px;
+    max-width: 258px;
+  }
+}
+
+.hero-slide__row {
+  width: 100%;
+  max-width: 775px;
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1439 {
+    max-width: 593px;
+  }
+
+  @include vp-767 {
+    max-width: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.hero-slide__col {
+  background-color: $color-white;
+
+  &--text {
+    width: 100%;
+    max-width: 496px;
+    padding-bottom: 35px;
+    padding-left: 50px;
+    padding-right: 55px;
+    border-radius: 0 0 0 30px;
+    position: relative;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    &::before {
+      display: none;
+      position: absolute;
+      content: "";
+      top: -1px;
+      right: -8px;
+      width: 8px;
+      height: 10px;
+      background-color: $color-white;
+      mask-size: 8px 10px;
+      mask-image: url("../__spritemap#sprite-icon-corner-view");
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+
+    @include vp-1439 {
+      max-width: 325px;
+      padding-left: 40px;
+      padding-right: 44px;
+      padding-bottom: 35px;
+    }
+
+    @include vp-767 {
+      max-width: 267px;
+      padding-left: 14px;
+      padding-right: 21px;
+      padding-bottom: 15px;
+      border-radius: 0 0 14px 0;
+      background-color: $color-white;
+    }
+  }
+
+  &--link {
+    width: 100%;
+    max-width: 279px;
+    padding-bottom: 35px;
+    padding-left: 30px;
+    padding-top: 10px;
+    border-radius: 0 0 30px 0;
+    position: relative;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: -26px;
+      width: 26px;
+      height: 26px;
+      background-color: $color-white;
+      mask-image: url("../__spritemap#sprite-icon-corner-view");
+      mask-size: 26px 26px;
+
+      @include vp-767 {
+        width: 10px;
+        height: 10px;
+        mask-size: 10px 10px;
+        right: -10px;
+        top: -1px;
+      }
+    }
+
+    @include vp-1439 {
+      max-width: 268px;
+      padding-top: 0;
+    }
+
+    @include vp-767 {
+      position: relative;
+      width: 100%;
+      max-width: 184px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      border-radius: 0 0 14px 14px;
+      background-color: $color-white;
+    }
+  }
+}
+
+.hero-slide__row p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+
+  @include vp-1439 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 .hero-slide__btn {
   min-height: 58px;
+
+  @include vp-1439 {
+    min-height: 56px;
+  }
+
+  @include vp-767 {
+    min-height: 44px;
+  }
 }
