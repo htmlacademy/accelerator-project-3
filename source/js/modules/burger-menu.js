@@ -5,10 +5,11 @@ const initBurgerMenu = () => {
   const overlay = document.querySelector('.overlay');
 
   const toggleMenu = () => {
-    burgerButton.classList.toggle('is-open');
+    const isOpen = burgerButton.classList.toggle('is-open');
     menu.classList.toggle('is-open');
     body.classList.toggle('no-scroll');
     overlay.classList.toggle('is-visible');
+    setMenuTabIndex(isOpen ? 0 : -1);
   };
 
   const closeMenu = () => {
@@ -16,28 +17,18 @@ const initBurgerMenu = () => {
     menu.classList.remove('is-open');
     body.classList.remove('no-scroll');
     overlay.classList.remove('is-visible');
-    setSubmenuTabIndex(-1);
+    setMenuTabIndex(-1);
   };
 
-  const setSubmenuTabIndex = (index) => {
-    const submenus = menu.querySelectorAll('.nav__submenu-list a');
-    submenus.forEach(link => {
+  const setMenuTabIndex = (index) => {
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
       link.tabIndex = index;
-    });
-  };
-
-  const toggleSubmenu = (submenu, isOpen) => {
-    const links = submenu.querySelectorAll('a');
-    links.forEach(link => {
-      link.tabIndex = isOpen ? 0 : -1;
     });
   };
 
   burgerButton.addEventListener('click', () => {
     toggleMenu();
-    if (!menu.classList.contains('is-open')) {
-      setSubmenuTabIndex(-1);
-    }
   });
 
   menu.addEventListener('click', (event) => {
@@ -48,7 +39,7 @@ const initBurgerMenu = () => {
       const isOpen = target.classList.toggle('is-open');
       event.preventDefault();
       submenu.classList.toggle('is-open');
-      toggleSubmenu(submenu, isOpen);
+      setMenuTabIndex(isOpen ? 0 : -1);
     } else if (target.tagName === 'A') {
       closeMenu();
     }
@@ -62,7 +53,7 @@ const initBurgerMenu = () => {
     }
   });
 
-  setSubmenuTabIndex(-1);
+  setMenuTabIndex(-1);
 };
 
 export { initBurgerMenu };
