@@ -14,47 +14,52 @@
 
 <body class="page-body">
   <div class="wrapper">
-    <div class="overlay"></div>
+
     <h1 class="visually-hidden">Проект Стажировка</h1>
     <header class="page-header">
       <div class="page-header__head">
-        <div class="page-header__logo">
-          <img width="30" height="30" src="img/svg/logo.svg" alt="логотип проекта Стажировка.">
-        </div>
-        <nav class="page-header__nav nav" aria-label="Primary">
-          <div class="burger-menu">
-            <button class="burger-button btn btn--menu" data-element="burger-button"><b>Меню</b><span></span></button>
-            <ul class="menu" data-element="menu">
-              <li><a href="#about">О проекте</a></li>
-              <li>
-                <a href="#programs">Программы</a>
-                <ul class="submenu">
-                  <li><a href="#">Стажировки</a></li>
-                  <li><a href="#">Волонтёрство</a></li>
-                  <li><a href="#">Учёба</a></li>
-                  <li><a href="#">Религия</a></li>
-                </ul>
-              </li>
-              <li><a href="#info">Как поехать</a></li>
-              <li><a href="#reviews">Отзывы</a></li>
-              <li>
-                <a href="#news">Новости</a>
-                <ul class="submenu">
-                  <li><a href="#">Общее</a></li>
-                  <li><a href="#">Волонтерство</a></li>
-                  <li><a href="#">Стажировки</a></li>
-                  <li><a href="#">Карьера</a></li>
-                  <li><a href="#">Путешествия</a></li>
-                </ul>
-              </li>
-              <li><a href="#contacts">Контакты</a></li>
-            </ul>
+        <div class="container page-header__container">
+          <div class="page-header__logo">
+            <img width="30" height="30" src="img/svg/logo.svg" alt="логотип проекта Стажировка.">
           </div>
-        </nav>
+          <nav class="page-header__nav nav" aria-label="Primary">
+            <button class="nav__button btn btn--menu" data-element="nav__button"><b>Меню</b><span></span></button>
+            <div class="nav__menu" data-element="menu">
+              <ul class="nav__menu-list">
+                <li><a href="#about">О проекте</a></li>
+                <li>
+                  <a class="has-submenu" href="#programs">Программы</a>
+                  <ul class="nav__submenu-list">
+                    <li><a href="#">Стажировки</a></li>
+                    <li><a href="#">Волонтёрство</a></li>
+                    <li><a href="#">Учёба</a></li>
+                    <li><a href="#">Религия</a></li>
+                  </ul>
+                </li>
+                <li><a href="#info">Как поехать</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li>
+                  <a class="has-submenu" href="#news">Новости</a>
+                  <ul class="nav__submenu-list">
+                    <li><a href="#">Общее</a></li>
+                    <li><a href="#">Волонтерство</a></li>
+                    <li><a href="#">Стажировки</a></li>
+                    <li><a href="#">Карьера</a></li>
+                    <li><a href="#">Путешествия</a></li>
+                  </ul>
+                </li>
+                <li><a href="#contacts">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="overlay"></div>
+        </div>
       </div>
       <section class="page-header__hero hero" data-test="hero">
         <h2 class="visually-hidden">Программы проекта Стажировка</h2>
-        <div class="hero__slider-pagination"></div>
+        <div class="hero__container container">
+          <div class="hero__slider-pagination"></div>
+        </div>
         <div class="hero__slider swiper" data-slider="hero-slider">
           <div class="hero__wrapper swiper-wrapper">
             <div class="hero__slide hero-slide swiper-slide">
