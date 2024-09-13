@@ -18,10 +18,16 @@
     position: relative;
     z-index: 2;
     transition: background-color $trans-default, min-width $trans-default;
+
+    @include vp-767 {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      min-height: 54px;
+    }
   }
 
   &--link {
-    padding: 5px;
+    padding: 4px;
     padding-left: 30px;
     min-width: 199px;
 
@@ -44,6 +50,10 @@
   &--on-light {}
 
   &--on-dark {}
+
+  @include vp-767 {
+    min-height: 44px;
+  }
 }
 
 // .btn--link {
