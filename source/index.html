@@ -243,10 +243,12 @@
       </div>
     </section>
     <section class="programs" data-test="programs">
-      <div class="programs__container container">
-        <h2 class="programs__title section-title">Программы</h2>
-        <a class="programs__btn btn btn--link" href="#"><b>все программы</b><span></span></a>
-        <div class="programs__slider swiper" data-slider="programs-slider">
+      <div class="programs__container">
+        <div class="programs__head">
+          <h2 class="programs__title section-title">Программы</h2>
+          <a class="programs__btn btn btn--link" href="#"><b>все программы</b><span></span></a>
+        </div>
+        <div class="programs__slider swiper slider" data-slider="programs-slider">
           <div class="programs__wrapper swiper-wrapper">
             <div class="programs__slide programs-slide swiper-slide">
               <picture>
@@ -367,8 +369,19 @@
             </div>
           </div>
         </div>
-        <div class="swiper-scrollbar programs__scrollbar"></div>
-        <div class="swiper-pagination programs__pagination"></div>
+        <div class="programs__ui slider__ui">
+          <div class="swiper-scrollbar programs__scrollbar slider__scrollbar"></div>
+          <div class="swiper-navigation programs__navigation slider__navigation">
+            <button
+              class="programs__slider-btn programs__slider-btn--prev slider__btn slider__btn--prev swiper-button-prev">
+              <span class="visually-hidden">Предыдущий слайд.</span>
+            </button>
+            <button
+              class="programs__slider-btn programs__slider-btn--next slider__btn slider__btn--next swiper-button-next">
+              <span class="visually-hidden">Следующий слайд.</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <div data-test="grant">grant</div>
