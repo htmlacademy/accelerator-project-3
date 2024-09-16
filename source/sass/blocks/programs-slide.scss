@@ -1,0 +1,153 @@
+.programs-slide.swiper-slide {
+  position: relative;
+  height: auto;
+  min-height: 420px;
+  padding-top: 280px;
+  padding-left: 20px;
+  padding-bottom: 17px;
+}
+
+.programs-slide picture {
+  font-size: 0;
+  line-height: 0;
+}
+
+.programs-slide > picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.programs-slide__content {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+}
+
+.programs-slide__content h3 {
+  margin: 0;
+  color: $color-action;
+  font-size: 24px;
+  line-height: 17px;
+  font-weight: 400;
+
+  @include vp-1439 {
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.programs-slide__content p {
+  margin: 0;
+  max-width: 239px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  @include vp-1439 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+}
+
+.programs-slide__head {
+  width: 100%;
+  max-width: 194px;
+  background-color: $color-white;
+  border-radius: 12px 12px 0 0;
+  padding: 18px;
+  padding-bottom: 6px;
+}
+
+.programs-slide__row {
+  background-color: $color-white;
+  border-radius: 0 12px 12px 12px;
+  max-width: 321px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.programs-slide__btn {
+  width: 30px;
+  height: 30px;
+  background-color: $color-action;
+  border-radius: 50%;
+  margin-top: 24px;
+  margin-bottom: 28px;
+  position: relative;
+  flex-shrink: 0;
+  transition: background-color $trans-default;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $color-white;
+    transition: background-color $trans-default;
+    width: 8px;
+    height: 8px;
+    mask-image: url("../__spritemap#sprite-icon-btn-arrow-view");
+    mask-size: 8px 8px;
+  }
+}
+
+.programs-slide__btn:hover:not(.disabled):not(:focus-visible):not(:active) {
+  background-color: $color-action;
+  transition: background-color $trans-default;
+}
+
+.programs-slide__btn:active {
+  background-color: $color-action;
+  transition: background-color $trans-default, opacity $trans-default;
+  opacity: 0.7;
+}
+
+.programs-slide__btn:focus::after,
+.programs-slide__btn:focus-visible::after {
+  transform: rotate(45deg) translateX(-4px);
+  transform-origin: center center;
+}
+
+.programs-slide__btn.disabled {
+  pointer-events: none;
+  border-color: $color-disabled;
+}
+
+.programs-slide__btn:hover:not(.disabled):not(:focus-visible):not(:active),
+.programs-slide__btn:active {
+  background-color: $color-white;
+  transition: background-color $trans-default;
+}
+
+.programs-slide__btn:hover:not(.disabled):not(:focus-visible):not(:active)::after,
+.programs-slide__btn:active::after {
+  background-color: $color-action;
+  transform: rotate(45deg) translateX(-4px);
+  transform-origin: center center;
+  transition: background-color $trans-default;
+}
