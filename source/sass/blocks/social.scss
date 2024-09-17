@@ -1,0 +1,107 @@
+.social__list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  list-style-type: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+
+  @include vp-1439 {
+    column-gap: 10px;
+  }
+}
+
+.social__item a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: $color-action;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background-color $trans-default;
+
+  &::before {
+    position: absolute;
+    content: "";
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $color-white;
+    transition: background-color $trans-default;
+  }
+
+  &:focus {
+    background-color: $color-white;
+    transition: background-color $trans-default;
+
+    &::before {
+      background-color: $color-action;
+      transition: background-color $trans-default;
+    }
+  }
+
+  &:focus-visible {
+    background-color: $color-white;
+    transition: background-color $trans-default;
+
+    &::before {
+      background-color: $color-action;
+      transition: background-color $trans-default;
+    }
+  }
+
+  &:hover:not(:focus):not(:focus-visible):not(:active):not(.disabled) {
+    background-color: $color-action;
+    transition: background-color $trans-default;
+
+    &::before {
+      background-color: rgba($color-white, 0.7);
+      transition: background-color $trans-default;
+    }
+  }
+
+  &:active {
+    background-color: $color-action-alternative;
+    transition: background-color $trans-default;
+
+    &::before {
+      background-color: $color-white;
+      transition: background-color $trans-default;
+    }
+  }
+
+  @include vp-767 {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.social__item a.disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.social__item--vk a::before {
+  width: 16px;
+  height: 10px;
+  mask-image: url("../__spritemap#sprite-icon-vk-view");
+  mask-size: 16px 10px;
+}
+
+.social__item--ok a::before {
+  width: 10px;
+  height: 16px;
+  mask-image: url("../__spritemap#sprite-icon-ok-view");
+  mask-size: 10px 16px;
+}
+
+.social__item--reddit a::before {
+  width: 16px;
+  height: 16px;
+  mask-image: url("../__spritemap#sprite-icon-reddit-view");
+  mask-size: 16px 16px;
+}
