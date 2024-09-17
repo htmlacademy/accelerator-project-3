@@ -384,7 +384,56 @@
         </div>
       </div>
     </section>
-    <div data-test="grant">grant</div>
+    <section class="grant" data-test="grant">
+      <div class="container">
+        <div class="grant__row">
+          <div class="grant__col grant__col--main">
+            <h2 class="grant__title section-title">Как поехать</h2>
+            <p>Свяжитесь с координатором, чтобы узнать полную информацию.
+              Вы получите актуальные сведения о доступных программах
+              и городах, в которых можете пройти программу.</p>
+            <div class="grant__image">
+              <picture>
+                <!-- mobile -->
+                <source width="290" height="200" type="image/webp" media="(max-width: 767px)"
+                  srcset="img/grant/img-mobile.webp 1x, img/grant/img-mobile@2x.webp 2x">
+                <source width="290" height="200" type="image/jpeg" media="(max-width: 767px)"
+                  srcset="img/grant/img-mobile.jpg 1x, img/grant/img-mobile@2x.jpg 2x">
+                <!-- tablet -->
+                <source width="678" height="375" type="image/webp" media="(min-width: 768px) and (max-width: 1439px)"
+                  srcset="img/grant/img-tablet.webp 1x, img/grant/img-tablet@2x.webp 2x">
+                <source width="678" height="375" type="image/jpeg" media="(min-width: 768px) and (max-width: 1439px)"
+                  srcset="img/grant/img-tablet.jpg 1x, img/grant/img-tablet@2x.jpg 2x">
+                <!-- desktop -->
+                <source width="498" height="363" type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/grant/img-desktop.webp 1x, img/grant/img-desktop@2x.webp 2x">
+                <img width="498" height="363" src="img/grant/img-desktop.jpg" srcset="img/grant/img-desktop@2x.jpg 2x"
+                  alt="Дорожный знак с указателями направлений к городам.">
+              </picture>
+            </div>
+          </div>
+          <div class="grant__col grant__col--info">
+            <b class="grant__text">Чтобы получить грант на обучение, вам нужно:</b>
+            <ul class="grant__list">
+              <li>
+                <p class="grant__item">Быть в возрасте от 16 до 30 лет</p>
+              </li>
+              <li>
+                <p class="grant__item">Иметь оконченное среднее образование</p>
+              </li>
+              <li>
+                <p class="grant__item">Иметь документально подтверждённое отсутствие
+                  судимости и пройти консульскую проверку</p>
+              </li>
+              <li>
+                <p class="grant__item">За последние 2 года быть не больше 3х месяцев
+                  подряд непрерывно в одной стране</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
     <div data-test="reviews">reviews</div>
