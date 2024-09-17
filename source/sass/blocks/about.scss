@@ -56,7 +56,7 @@
 
   @include vp-767 {
     margin-bottom: 15px;
-    margin-left: 1px;
+    // margin-left: 1px;
   }
 }
 
@@ -214,7 +214,7 @@
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 16px;
-  border: 1px solid $color-white;
+  border: 1px solid $color-white-alternative;
 
   @include vp-1439 {
     padding: 0;
@@ -249,6 +249,7 @@
   }
 
   @include vp-767 {
+    max-width: none;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.16px;
@@ -259,7 +260,7 @@
   margin: 0;
   width: 100%;
   max-width: 201px;
-  color: $color-white;
+  color: $color-white-alternative;
   font-size: 16px;
   line-height: 20px;
   font-weight: 300;
