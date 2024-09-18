@@ -2,6 +2,8 @@
   padding-top: 60px;
   padding-bottom: 40px;
 
+  // background-color: red;
+
   @include vp-1439 {
     padding-top: 40px;
   }
@@ -17,13 +19,18 @@
   @include vp-1439 {
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
-    // grid-template-rows: minmax(52px, auto) minmax(49px, auto) auto;
+    grid-template-rows: minmax(77px, auto) auto auto;
     grid-column-gap: 0;
     grid-row-gap: 0;
-    // justify-content: space-between;
+    justify-content: space-between;
   }
 
-  @include vp-767 {}
+  @include vp-767 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .page-footer__col {}
@@ -43,7 +50,11 @@
     margin-right: 98px;
   }
 
-  @include vp-767 {}
+  @include vp-767 {
+    margin-right: 0;
+    margin-bottom: 20px;
+    order: 1;
+  }
 }
 
 .page-footer__col--nav {
@@ -53,9 +64,16 @@
   @include vp-1439 {
     grid-area: 1 / 2 / 2 / 4;
     justify-self: end;
+    align-self: start;
+    padding-top: 16px;
   }
 
-  @include vp-767 {}
+  @include vp-767 {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    order: 2;
+  }
 }
 
 .page-footer__col--social {
@@ -69,9 +87,15 @@
     grid-area: 2 / 3 / 4 / 4;
     width: 100%;
     max-width: 220px;
+    justify-self: start;
+    padding-top: 1px;
   }
 
-  @include vp-767 {}
+  @include vp-767 {
+    padding-top: 0;
+    max-width: none;
+    order: 5;
+  }
 }
 
 .page-footer__col--copyright {
@@ -84,7 +108,10 @@
     align-self: end;
   }
 
-  @include vp-767 {}
+  @include vp-767 {
+    margin-bottom: 15px;
+    order: 4;
+  }
 }
 
 .page-footer__col--policy {
@@ -99,7 +126,10 @@
     align-self: start;
   }
 
-  @include vp-767 {}
+  @include vp-767 {
+    margin-bottom: 13px;
+    order: 3;
+  }
 }
 
 .page-footer__col--copyright span {
@@ -115,7 +145,6 @@
 
   @include vp-767 {
     line-height: 14px;
-    color: rgba($color-dark, 1);
   }
 }
 
@@ -124,26 +153,67 @@
   font-weight: 400;
   line-height: 18px;
   color: $color-dark;
+  text-decoration: none;
   transition: color $trans-default;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    background-color: $color-dark;
+    transition: background-color $trans-default;
+
+    @include vp-1439 {
+      bottom: 0;
+    }
+
+    @include vp-767 {
+      bottom: -1px;
+    }
+  }
 
   &:focus {
     color: $color-action;
     transition: color $trans-default;
+
+    &::after {
+      background-color: $color-action;
+      transition: background-color $trans-default;
+    }
   }
 
   &:focus-visible {
     color: $color-action;
     transition: color $trans-default;
+
+    &::after {
+      background-color: $color-action;
+      transition: background-color $trans-default;
+    }
   }
 
   &:hover:not(:focus):not(:focus-visible):not(:active):not(.disabled) {
     color: rgba($color-action, 0.7);
     transition: color $trans-default;
+
+    &::after {
+      background-color: $color-action;
+      transition: background-color $trans-default;
+    }
   }
 
   &:active {
     color: $color-action-alternative;
     transition: color $trans-default;
+
+    &::after {
+      background-color: $color-action;
+      transition: background-color $trans-default;
+    }
   }
 
   @include vp-1439 {
