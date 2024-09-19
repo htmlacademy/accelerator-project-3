@@ -7,6 +7,10 @@
   width: 100%;
   max-width: 54px;
   column-gap: 10px;
+
+  @include vp-767 {
+    max-width: 52px;
+  }
 }
 
 .slider__btn {
