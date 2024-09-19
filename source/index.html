@@ -246,7 +246,7 @@
       <div class="programs__container">
         <h2 class="programs__title section-title">Программы</h2>
         <a class="programs__btn btn btn--link" href="#"><b>все программы</b><span></span></a>
-        <div class="programs__slider swiper slider" data-slider="programs-slider">
+        <div class="programs__slider slider swiper" data-slider="programs-slider">
           <div class="programs__wrapper swiper-wrapper">
             <div class="programs__slide programs-slide swiper-slide">
               <picture>
@@ -272,7 +272,7 @@
                 </div>
                 <div class="programs-slide__row">
                   <p>Получите незаменимый опыт
-                    работы в крупнейших мировых
+                    работы в крупнейших <br>мировых
                     компаниях.</p>
                   <a class="programs-slide__btn" href="#"><span class="visually-hidden">Подробнее</span></a>
                 </div>
@@ -301,8 +301,8 @@
                   <h3>Волонтёрство</h3>
                 </div>
                 <div class="programs-slide__row">
-                  <p>Помогайте другим и развивайте
-                    свои лидерские качества.</p>
+                  <p>Помогайте другим <br>и развивайте
+                    свои <br>лидерские качества.</p>
                   <a class="programs-slide__btn" href="#"><span class="visually-hidden">Подробнее</span></a>
                 </div>
               </div>
@@ -367,8 +367,8 @@
             </div>
           </div>
         </div>
-        <div class="swiper-scrollbar programs__scrollbar slider__scrollbar"></div>
-        <div class="swiper-navigation programs__navigation slider__navigation">
+        <div class="programs__scrollbar slider__scrollbar swiper-scrollbar"></div>
+        <div class="programs__navigation slider__navigation swiper-navigation">
           <button
             class="programs__slider-btn programs__slider-btn--prev slider__btn slider__btn--prev swiper-button-prev">
             <span class="visually-hidden">Предыдущий слайд.</span>
@@ -432,7 +432,139 @@
     </section>
     <section class="news" id="news" data-test="news">news</section>
     <section class="FAQ" id="FAQ" data-test="FAQ">FAQ</section>
-    <section class="reviews" id="reviews" data-test="reviews">reviews</section>
+    <section class="reviews" id="reviews" data-test="reviews">
+      <div class="reviews__container">
+        <h2 class="reviews__title section-title">Отзывы</h2>
+        <div class="reviews__slider swiper" data-slider="reviews-slider">
+          <div class="reviews__wrapper swiper-wrapper">
+            <div class="reviews__slide reviews-slide swiper-slide">
+              <div class="reviews-slide__container">
+                <div class="reviews-slide__head">
+                  <div class="reviews-slide__col reviews-slide__col--avatar">
+                    <div class="reviews-slide__avatar">
+                      <picture>
+                        <!-- desktop -->
+                        <source width="90" height="90" type="image/webp" media="(min-width: 1440px)"
+                          srcset="img/reviews/avatar-1.webp 1x, img/reviews/avatar-1@2x.webp 2x">
+                        <img width="90" height="90" src="img/reviews/avatar-1.jpg"
+                          srcset="img/reviews/avatar-1@2x.jpg 2x" alt="Лола Алекс.">
+                      </picture>
+                    </div>
+                    <b>Лола</b>
+                    <b>Алекс</b>
+                  </div>
+                  <div class="reviews-slide__col reviews-slide__col--program">
+                    <b>программа</b>
+                    <span>Masa Art Challenge</span>
+                  </div>
+                  <div class="reviews-slide__col reviews-slide__col--date">
+                    <b>Дата</b>
+                    <span>Осень 2022</span>
+                  </div>
+                </div>
+                <div class="reviews-slide__content">
+                  <h3>Я могу с уверенностью сказать, что это был
+                    один из самых незабываемых опытов
+                    в жизни!</h3>
+                  <p>Я рекомендую программу «Стажировка» всем студентам,
+                    желающим получить незабываемые впечатления. Сочетание
+                    путешествий, общения и значимой работы действительно
+                    отличает её от других программ, и я чувствую огромную
+                    благодарность за предоставленную мне возможность.</p>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__slide reviews-slide swiper-slide">
+              <div class="reviews-slide__container">
+                <div class="reviews-slide__head">
+                  <div class="reviews-slide__col reviews-slide__col--avatar">
+                    <div class="reviews-slide__avatar">
+                      <picture>
+                        <!-- desktop -->
+                        <source width="90" height="90" type="image/webp" media="(min-width: 1440px)"
+                          srcset="img/reviews/avatar-2.webp 1x, img/reviews/avatar-2@2x.webp 2x">
+                        <img width="90" height="90" src="img/reviews/avatar-2.jpg"
+                          srcset="img/reviews/avatar-2@2x.jpg 2x" alt="Давид Иванов.">
+                      </picture>
+                    </div>
+                    <b>Давид</b>
+                    <b>Иванов</b>
+                  </div>
+                  <div class="reviews-slide__col reviews-slide__col--program">
+                    <b>программа</b>
+                    <span>Volunteer Chance</span>
+                  </div>
+                  <div class="reviews-slide__col reviews-slide__col--date">
+                    <b>Дата</b>
+                    <span>Лето 2022</span>
+                  </div>
+                </div>
+                <div class="reviews-slide__content">
+                  <h3>Благодаря опыту стажировки я узнал
+                    так много нового о себе и об окружающем
+                    мире.</h3>
+                  <p>Каждый день был возможностью оказать ощутимое влияние
+                    на жизнь других людей. Я бы очень рекомендовал
+                    эту волонтёрскую программу всем, кто ищет значимый
+                    и незабываемый опыт. Организация была на высшем уровне.
+                    Для меня было честью быть частью такой удивительной
+                    инициативы.</p>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__slide reviews-slide swiper-slide">
+              <div class="reviews-slide__container">
+                <div class="reviews-slide__head">
+                  <div class="reviews-slide__col reviews-slide__col--avatar">
+                    <div class="reviews-slide__avatar">
+                      <picture>
+                        <!-- desktop -->
+                        <source width="90" height="90" type="image/webp" media="(min-width: 1440px)"
+                          srcset="img/reviews/avatar-2.webp 1x, img/reviews/avatar-2@2x.webp 2x">
+                        <img width="90" height="90" src="img/reviews/avatar-2.jpg"
+                          srcset="img/reviews/avatar-2@2x.jpg 2x" alt="Давид Иванов.">
+                      </picture>
+                    </div>
+                    <b>Давид</b>
+                    <b>Иванов</b>
+                  </div>
+                  <div class="reviews-slide__col reviews-slide__col--program">
+                    <b>программа</b>
+                    <span>Volunteer Chance</span>
+                  </div>
+                  <div class="reviews-slide__col reviews-slide__col--date">
+                    <b>Дата</b>
+                    <span>Лето 2022</span>
+                  </div>
+                </div>
+                <div class="reviews-slide__content">
+                  <h3>Благодаря опыту стажировки я узнал
+                    так много нового о себе и об окружающем
+                    мире.</h3>
+                  <p>Каждый день был возможностью оказать ощутимое влияние
+                    на жизнь других людей. Я бы очень рекомендовал
+                    эту волонтёрскую программу всем, кто ищет значимый
+                    и незабываемый опыт. Организация была на высшем уровне.
+                    Для меня было честью быть частью такой удивительной
+                    инициативы.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__scrollbar slider__scrollbar swiper-scrollbar"></div>
+        <div class="reviews__navigation slider__navigation swiper-navigation">
+          <button
+            class="reviews__slider-btn reviews__slider-btn--prev slider__btn slider__btn--prev swiper-button-prev">
+            <span class="visually-hidden">Предыдущий слайд.</span>
+          </button>
+          <button
+            class="reviews__slider-btn reviews__slider-btn--next slider__btn slider__btn--next swiper-button-next">
+            <span class="visually-hidden">Следующий слайд.</span>
+          </button>
+        </div>
+      </div>
+    </section>
     <section class="contacts" id="about" data-test="contacts">
       <div class="container">
         <div class="contacts__head">

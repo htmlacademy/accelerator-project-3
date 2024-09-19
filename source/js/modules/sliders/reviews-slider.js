@@ -1,23 +1,22 @@
 import Swiper from 'swiper';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
-// import 'swiper/css/scrollbar';
 
-const initProgramsSlider = () => {
-  const programsSlider = document.querySelector('[data-slider="programs-slider"]');
-  if (!programsSlider) {
+const initReviewsSlider = () => {
+  const reviewsSlider = document.querySelector('[data-slider="reviews-slider"]');
+  if (!reviewsSlider) {
     return;
   }
 
-  new Swiper(programsSlider, {
+  new Swiper(reviewsSlider, {
     modules: [Navigation, Scrollbar],
     navigation: {
-      nextEl: '.programs__slider-btn--next',
-      prevEl: '.programs__slider-btn--prev',
+      nextEl: '.reviews__slider-btn--next',
+      prevEl: '.reviews__slider-btn--prev',
       disabledClass: 'is-disabled',
     },
     scrollbar: {
-      el: '.programs__scrollbar',
+      el: '.reviews__scrollbar',
       horizontalClass: 'slider__scrollbar',
       draggable: true,
       dragClass: 'slider__drag-element',
@@ -30,6 +29,7 @@ const initProgramsSlider = () => {
     loop: false,
     slidesPerView: 3,
     spaceBetween: 32,
+    autoHeight: false,
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -38,7 +38,8 @@ const initProgramsSlider = () => {
         },
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 1,
+        // slidesPerView: 1.3,
         spaceBetween: 30,
         scrollbar: {
           enabled: true,
@@ -47,7 +48,7 @@ const initProgramsSlider = () => {
       },
       1440: {
         allowTouchMove: false,
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 32,
         scrollbar: {
           enabled: true,
@@ -57,4 +58,4 @@ const initProgramsSlider = () => {
   });
 };
 
-export { initProgramsSlider };
+export { initReviewsSlider };
