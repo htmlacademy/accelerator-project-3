@@ -68,16 +68,6 @@
 .slider__scrollbar {
   background-color: rgba($color-action, 0.2);
   height: 2px;
-  width: 100%;
-  max-width: 1136px;
-
-  @include vp-1439 {
-    max-width: 562px;
-  }
-
-  @include vp-767 {
-    display: none;
-  }
 }
 
 .slider__drag-element {
