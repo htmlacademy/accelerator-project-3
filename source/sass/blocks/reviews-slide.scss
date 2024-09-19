@@ -1,0 +1,105 @@
+.reviews-slide {}
+
+.reviews-slide__container {}
+
+.reviews-slide__head {}
+
+.reviews-slide__col {}
+
+.reviews-slide__col--avatar {}
+
+.reviews-slide__avatar {}
+
+.reviews-slide__avatar b {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $color-action;
+
+  @include vp-1439 {
+    font-size: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.reviews-slide__col--program {}
+
+.reviews-slide__col--program b {}
+
+.reviews-slide__col--program span {}
+
+.reviews-slide__col--program b,
+.reviews-slide__col--date b {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  color: $color-action;
+  text-transform: uppercase;
+
+  @include vp-1439 {}
+
+  @include vp-767 {}
+}
+
+.reviews-slide__col--program span,
+.reviews-slide__col--date span {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  @include vp-1439 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.reviews-slide__col--date {}
+
+.reviews-slide__col--date b {}
+
+.reviews-slide__col--date span {}
+
+.reviews-slide__content {}
+
+.reviews-slide__content h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  color: $color-action;
+
+  @include vp-1439 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.reviews-slide__content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+
+  @include vp-1439 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
