@@ -72,10 +72,6 @@
   }
 }
 
-.reviews__wrapper {}
-
-.reviews__slide {}
-
 .reviews__scrollbar {
   grid-area: 3 / 1 / 4 / 3;
   align-self: center;
@@ -104,9 +100,3 @@
     grid-area: 1 / 2 / 2 / 3;
   }
 }
-
-.reviews__slider-btn {}
-
-.reviews__slider-btn--prev {}
-
-.reviews__slider-btn--next {}

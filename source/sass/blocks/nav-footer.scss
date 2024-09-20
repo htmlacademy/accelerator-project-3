@@ -10,7 +10,6 @@
   line-height: 0;
 
   @include vp-1439 {
-    // column-gap: 15px;
     column-gap: 0;
     width: 528px;
     justify-content: space-between;

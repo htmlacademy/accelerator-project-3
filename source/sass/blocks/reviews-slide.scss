@@ -15,8 +15,8 @@
 
   @include vp-767 {
     max-width: none;
-    padding-top: 31px;
-    padding-bottom: 31px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -67,8 +67,6 @@
       row-gap: 8px;
     }
   }
-
-  &--date {}
 }
 
 .reviews-slide__avatar {
@@ -115,10 +113,6 @@
   }
 }
 
-.reviews-slide__col--program b {}
-
-.reviews-slide__col--program span {}
-
 .reviews-slide__col--program b,
 .reviews-slide__col--date b {
   font-size: 12px;
@@ -127,10 +121,6 @@
   letter-spacing: 0.12px;
   color: $color-action;
   text-transform: uppercase;
-
-  @include vp-1439 {}
-
-  @include vp-767 {}
 }
 
 .reviews-slide__col--program span,
@@ -148,12 +138,6 @@
     line-height: 14px;
   }
 }
-
-.reviews-slide__col--date b {}
-
-.reviews-slide__col--date span {}
-
-.reviews-slide__content {}
 
 .reviews-slide__content h3 {
   margin: 0;
