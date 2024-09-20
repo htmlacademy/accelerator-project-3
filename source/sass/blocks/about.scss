@@ -56,7 +56,6 @@
 
   @include vp-767 {
     margin-bottom: 15px;
-    // margin-left: 1px;
   }
 }
 
@@ -227,8 +226,6 @@
     align-items: flex-start;
     row-gap: 15px;
   }
-
-  @include vp-767 {}
 }
 
 .about__item h4 {

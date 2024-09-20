@@ -4,17 +4,12 @@
   align-items: flex-end;
 }
 
-.nav__button {}
-
 .nav__menu {
   margin-top: 4px;
   background-color: $color-action;
   min-width: 286px;
   border-radius: 16px;
   padding: 35px 25px;
-  // transform: scale(0);
-  // transform-origin: top right;
-  // transition: transform $trans-default;
   opacity: 0;
   transform: translateY(-100px);
   visibility: hidden;
@@ -22,9 +17,6 @@
 }
 
 .nav__menu.is-open {
-  // transform: scale(1);
-  // transform-origin: top right;
-  // transition: transform $trans-default;
   opacity: 1;
   transform: translateY(0);
   visibility: visible;

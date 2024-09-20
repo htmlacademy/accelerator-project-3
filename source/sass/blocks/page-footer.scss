@@ -2,8 +2,6 @@
   padding-top: 60px;
   padding-bottom: 40px;
 
-  // background-color: red;
-
   @include vp-1439 {
     padding-top: 40px;
   }
@@ -32,8 +30,6 @@
     flex-wrap: wrap;
   }
 }
-
-.page-footer__col {}
 
 .page-footer__col--logo {
   width: 52px;
