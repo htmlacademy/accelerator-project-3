@@ -15,21 +15,12 @@
 
   @include vp-767 {
     max-width: none;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
-
-// .reviews-slide__container {
-//   padding-top: 50px;
-//   padding-bottom: 50px;
-//   padding-left: 50px;
-//   padding-right: 46px;
-//   border-radius: 16px;
-//   border: 2px solid $color-action;
-// }
 
 .reviews-slide__head {
   display: flex;
@@ -47,7 +38,7 @@
 .reviews-slide__col {
   &--avatar {
     display: grid;
-    grid-template-columns: 90px, auto;
+    grid-template-columns: 90px auto;
     grid-template-rows: repeat(2, auto);
     grid-column-gap: 15px;
     grid-row-gap: 0;
@@ -55,6 +46,9 @@
 
     @include vp-767 {
       width: 100%;
+      grid-template-columns: 60px auto;
+      grid-column-gap: 10px;
+      justify-items: start;
     }
   }
 
@@ -88,6 +82,11 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
+
+  @include vp-767 {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .reviews-slide__col--avatar b {
