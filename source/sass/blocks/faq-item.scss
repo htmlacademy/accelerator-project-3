@@ -1,43 +1,22 @@
 .faq-item {
   border-radius: 16px;
-}
-
-.faq-item__btn {
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $color-transparent;
   cursor: pointer;
   border: 2px solid $color-action;
-  border-radius: 16px;
   padding: 40px;
   background-color: $color-white-alternative;
   transition: background-color $trans-default;
 
-  @include vp-1439 {
-    padding: 30px;
-  }
-
-  @include vp-767 {
-    padding-left: 17px;
-    padding-right: 17px;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    column-gap: 25px;
-  }
-
-  &:focus {
+  &:focus:not(.disabled):not(.is-active) {
     background-color: $color-white;
     transition: background-color $trans-default;
   }
 
-  &:focus-visible {
+  &:focus-visible:not(.disabled):not(.is-active) {
     background-color: $color-white;
     transition: background-color $trans-default;
   }
 
-  &:hover:not(:focus):not(:focus-visible):not(:active):not(.disabled) {
+  &:hover:not(:focus):not(:focus-visible):not(:active):not(.disabled):not(.is-active) {
     background-color: $color-white;
     transition: background-color $trans-default;
   }
@@ -46,10 +25,33 @@
     background-color: $color-white;
     transition: background-color $trans-default;
   }
+
+  @include vp-1439 {
+    padding: 30px;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
-.faq-item__btn span {
+.faq-item__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+
+  @include vp-767 {
+    min-height: auto;
+  }
+}
+
+.faq-item__head span {
   flex-shrink: 0;
+  align-self: flex-start;
   padding: 0;
   border: 1px solid $color-action;
   background-color: $color-action;
@@ -75,26 +77,9 @@
     mask-size: 18px 18px;
     transition: background-color $trans-default;
   }
-}
 
-.faq-item__btn:focus span,
-.faq-item__btn:hover span {
-  background-color: $color-white;
-  transition: background-color $trans-default;
-
-  &::before {
-    background-color: $color-action;
-    transition: background-color $trans-default;
-  }
-}
-
-.faq-item__btn:active span {
-  background-color: $color-action-alternative;
-  transition: background-color $trans-default;
-
-  &::before {
-    background-color: $color-white;
-    transition: background-color $trans-default;
+  @include vp-767 {
+    align-self: center;
   }
 }
 
@@ -131,16 +116,10 @@
   }
 }
 
-.faq-item-content {
+.faq-item__content p {
   display: none;
-}
-
-.faq-item-content p {
   margin: 0;
   margin-top: 20px;
-  padding-left: 42px;
-  padding-right: 72px;
-  padding-bottom: 42px;
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
@@ -148,16 +127,10 @@
 
   @include vp-1439 {
     line-height: 20px;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-bottom: 32px;
   }
 
   @include vp-767 {
     font-size: 14px;
-    padding-left: 17px;
-    padding-right: 17px;
-    padding-bottom: 22px;
   }
 }
 
@@ -187,6 +160,70 @@
   }
 }
 
-.faq-item.is-active .faq-item-content {
+.faq-item.is-active p {
   display: block;
+}
+
+.faq-item:focus:not(.disabled):not(.is-active) span,
+.faq-item:focus-visible:not(.disabled):not(.is-active) span,
+.faq-item:hover:not(:focus):not(:focus-visible):not(:active):not(.disabled):not(.is-active) span {
+  background-color: $color-white;
+  transition: background-color $trans-default;
+
+  &::before {
+    background-color: $color-action;
+    transition: background-color $trans-default;
+  }
+}
+
+.faq-item:active:not(.disabled):not(.is-active) span {
+  background-color: $color-action-alternative;
+  transition: background-color $trans-default;
+
+  &::before {
+    background-color: $color-white;
+    transition: background-color $trans-default;
+  }
+}
+
+.faq-item.is-active:focus:not(.disabled),
+.faq-item.is-active:focus-visible:not(.disabled),
+.faq-item.is-active:hover:not(:focus):not(:focus-visible):not(:active):not(.disabled) {
+  background-color: $color-action;
+  transition: background-color $trans-default;
+}
+
+.faq-item.is-active:active:not(.disabled) {
+  background-color: $color-action-alternative;
+  transition: background-color $trans-default;
+}
+
+.faq-item.is-active:focus:not(.disabled) span,
+.faq-item.is-active:focus-visible:not(.disabled) span,
+.faq-item.is-active:hover:not(:focus):not(:focus-visible):not(:active):not(.disabled) span {
+  background-color: $color-action;
+  border-color: $color-white;
+  transition: border-color $trans-default, background-color $trans-default;
+
+  &::before {
+    background-color: $color-white;
+    transition: background-color $trans-default;
+  }
+}
+
+.faq-item.is-active:active:not(.disabled) span {
+  background-color: $color-white;
+  border-color: $color-white;
+  transition: border-color $trans-default, background-color $trans-default;
+
+  &::before {
+    background-color: $color-action-alternative;
+    transition: background-color $trans-default;
+  }
+}
+
+.faq-item.disabled,
+.faq-item.is-active.disabled {
+  pointer-events: none;
+  opacity: 0.3;
 }
