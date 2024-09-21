@@ -231,7 +231,7 @@
 .about__item h4 {
   margin: 0;
   width: 100%;
-  max-width: 201px;
+  max-width: 171px;
   color: $color-white;
   font-size: 26px;
   line-height: 30px;
@@ -240,6 +240,7 @@
   text-transform: uppercase;
 
   @include vp-1439 {
+    max-width: 211px;
     font-size: 20px;
     line-height: 22px;
     letter-spacing: 0.2px;
@@ -271,8 +272,8 @@
   }
 }
 
-.about__item br {
-  @include vp-1440 {
-    display: none;
-  }
-}
+// .about__item br {
+//   @include vp-1440 {
+//     display: none;
+//   }
+// }
