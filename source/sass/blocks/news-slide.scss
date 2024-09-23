@@ -255,3 +255,25 @@
   transform-origin: center center;
   transition: background-color $trans-default;
 }
+
+.news-tab__slider-pagination {
+  display: flex;
+  column-gap: 20px;
+}
+
+.news-tab__slider-bullet {
+  width: 32px;
+  height: 32px;
+  background-color: red;
+  border-radius: 50%;
+  border: none;
+  color: $color-white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-tab__slider-bullet--is-active {
+  background-color: $color-action;
+}

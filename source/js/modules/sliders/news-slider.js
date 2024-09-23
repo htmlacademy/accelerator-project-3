@@ -28,6 +28,7 @@ const initNewsSlider = () => {
     pagination: {
       el: '.news-tab__slider-pagination',
       clickable: true,
+      // type: 'custom',
       bulletElement: 'button type="button"',
       bulletClass: 'news-tab__slider-bullet',
       bulletActiveClass: 'news-tab__slider-bullet--is-active',
