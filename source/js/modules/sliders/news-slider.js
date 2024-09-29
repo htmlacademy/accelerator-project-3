@@ -7,18 +7,34 @@ const initNewsSlider = () => {
   const newsSlider = document.querySelector('[data-slider="news-tab-slider"]');
   if (!newsSlider) return;
 
-  // Дублирование слайдов для обеспечения 4 буллетов пагинации на всех разрешениях
   const slides = Array.from(newsSlider.querySelectorAll('.swiper-slide'));
   const totalSlides = slides.length;
-  const slidesToDuplicate = 12 - totalSlides; // 12 слайдов для 4 буллетов по 3 слайда
+  const slidesToDuplicate = 12 - totalSlides;
 
   for (let i = 0; i < slidesToDuplicate; i++) {
     const clone = slides[i % totalSlides].cloneNode(true);
     newsSlider.querySelector('.swiper-wrapper').appendChild(clone);
   }
 
-  // Меняем местами слайды для разрешений от 768px до 1440px
-  rearrangeSlides();
+  const swapSlides = () => {
+    const travelsSlide = newsSlider.querySelector('.news-slide--travels');
+    const volunteeringSlide = newsSlider.querySelector('.news-slide--volunteering');
+    const travelsIndex = Array.from(slides).indexOf(travelsSlide);
+    const volunteeringIndex = Array.from(slides).indexOf(volunteeringSlide);
+
+    if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+      if (travelsIndex > -1 && volunteeringIndex > -1) {
+        newsSlider.querySelector('.swiper-wrapper').insertBefore(volunteeringSlide, travelsSlide);
+      }
+    } else {
+      if (travelsIndex > volunteeringIndex) {
+        newsSlider.querySelector('.swiper-wrapper').insertBefore(travelsSlide, volunteeringSlide);
+      }
+    }
+  };
+
+  window.addEventListener('resize', swapSlides);
+  swapSlides();
 
   new Swiper(newsSlider, {
     modules: [Navigation, Pagination],
@@ -51,7 +67,7 @@ const initNewsSlider = () => {
       768: {
         slidesPerView: 'auto',
         slidesPerGroup: 4,
-        spaceBetween: 16,
+        spaceBetween: 0,
         grid: {
           rows: 2,
         },
@@ -97,15 +113,9 @@ const initNewsSlider = () => {
       }
     });
   }
-
-  function rearrangeSlides() {
-    const wrapper = newsSlider.querySelector('.swiper-wrapper');
-    const travelsSlide = wrapper.querySelector('.news-slide--travels');
-    const volunteeringSlide = wrapper.querySelector('.news-slide--volunteering');
-    if (travelsSlide && volunteeringSlide) {
-      wrapper.insertBefore(volunteeringSlide, travelsSlide);
-    }
-  }
 };
+
+document.addEventListener('DOMContentLoaded', initNewsSlider);
+
 
 export { initNewsSlider };
