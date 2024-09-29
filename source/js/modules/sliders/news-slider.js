@@ -60,9 +60,12 @@ const initNewsSlider = () => {
     loop: false,
     breakpoints: {
       320: {
-        slidesPerView: 'auto',
-        slidesPerGroup: 2,
-        spaceBetween: 16,
+        slidesPerView: 1,
+        slidesPerGroup: 4,
+        spaceBetween: 0,
+        grid: {
+          rows: 2,
+        },
       },
       768: {
         slidesPerView: 'auto',

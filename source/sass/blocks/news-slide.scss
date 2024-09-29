@@ -28,6 +28,11 @@
     max-width: 324px;
     min-height: 350px;
   }
+
+  @include vp-767 {
+    max-width: 290px;
+    min-height: 240px;
+  }
 }
 
 .news-slide--main .news-slide__container {
@@ -35,6 +40,11 @@
 
   @include vp-1439 {
     max-width: 324px;
+  }
+
+  @include vp-767 {
+    min-height: 330px;
+    max-width: none;
   }
 }
 
@@ -138,6 +148,12 @@
     //
   }
 
+  @include vp-767 {
+    max-width: 200px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+  }
+
 }
 
 .news-slide__row {
@@ -161,8 +177,16 @@
     //
     padding-top: 12px;
     padding-bottom: 15px;
-    // align-items: flex-end;
     //
+  }
+
+  @include vp-767 {
+    max-width: 263px;
+    padding-right: 10px;
+    min-height: 52px;
+
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -184,6 +208,12 @@
     padding-top: 8px;
     max-width: 207px;
   }
+
+  @include vp-767 {
+    max-width: 200px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+  }
 }
 
 // .news-slide--travels .news-slide__head {}
@@ -204,6 +234,12 @@
 
   @include vp-1439 {
     max-width: 240px;
+  }
+
+  @include vp-767 {
+    max-width: 263px;
+    padding-top: 13px;
+    padding-bottom: 9px;
   }
 }
 
@@ -286,6 +322,10 @@
     margin-top: 0;
   }
 
+  @include vp-767 {
+    margin-bottom: 1px;
+  }
+
   //
 }
 
@@ -336,7 +376,7 @@
   width: auto;
 
   @include vp-767 {
-    display: none;
+    column-gap: 16px;
   }
 }
 
@@ -351,6 +391,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include vp-767 {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .news-tab__slider-bullet--is-active {
