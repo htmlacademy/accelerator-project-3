@@ -1,34 +1,37 @@
 .news-slide__container {
   width: 100%;
-  max-width: 286px;
-  position: relative;
-  height: auto;
+  min-width: 286px;
   min-height: 400px;
+  height: auto;
+  position: relative;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  border-radius: 12px;
+  font-size: 0;
+  line-height: 0;
 
   @include vp-1439 {
-    max-width: 324px;
+    min-width: 324px;
     min-height: 350px;
   }
 
   @include vp-767 {
-    max-width: 290px;
+    min-width: 290px;
     min-height: 240px;
   }
 }
 
 .news-slide--main .news-slide__container {
-  max-width: 604px;
+  min-width: 604px;
 
   @include vp-1439 {
-    max-width: 324px;
+    min-width: 324px;
   }
 
   @include vp-767 {
+    min-width: 290px;
     min-height: 330px;
-    max-width: none;
   }
 }
 
