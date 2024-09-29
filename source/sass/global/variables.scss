@@ -1,0 +1,26 @@
+// Viewports
+// ---------------------------------
+$vp-768: 768px;
+$vp-1440: 1440px;
+
+// Colors
+// ---------------------------------
+$color-white: #ffffff;
+$color-white-alternative: #f0efe9;
+$color-dark: #484848;
+$color-action: #316dc2;
+$color-action-alternative: #275699;
+$color-error: #ff5e66;
+$color-disabled: #a9afb7;
+$color-transparent: rgba(255, 255, 255, 0);
+$color-overlay: rgba(#316dc2, 0.2);
+$color-overlay-alternative: rgba(#0d1d33, 0.3);
+$fz-default: 16px;
+$font-family: "Manrope", "Arial", sans-serif;
+$ff-placeholder: $font-family;
+
+// Animation
+// ---------------------------------
+
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
