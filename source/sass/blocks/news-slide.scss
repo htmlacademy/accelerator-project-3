@@ -1,13 +1,17 @@
 .news-slide.swiper-slide {
   max-width: 286px;
 
-  @include vp-1439 {}
+  @include vp-1439 {
+    max-width: none;
+  }
 }
 
 .news-slide--main.swiper-slide {
   max-width: 604px;
 
-  @include vp-1439 {}
+  @include vp-1439 {
+    max-width: none;
+  }
 }
 
 .news-slide__container {
@@ -33,6 +37,30 @@
     max-width: 324px;
   }
 }
+
+// .news-slide--main {
+//   @include vp-1439 {
+//     order: 1;
+//   }
+// }
+
+// .news-slide--travels {
+//   @include vp-1439 {
+//     order: 2;
+//   }
+// }
+
+// .news-slide--volunteering {
+//   @include vp-1439 {
+//     order: 3;
+//   }
+// }
+
+// .news-slide--career {
+//   @include vp-1439 {
+//     order: 4;
+//   }
+// }
 
 .news-slide__container picture {
   font-size: 0;
