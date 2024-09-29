@@ -1,19 +1,3 @@
-.news-slide.swiper-slide {
-  max-width: 286px;
-
-  @include vp-1439 {
-    max-width: none;
-  }
-}
-
-.news-slide--main.swiper-slide {
-  max-width: 604px;
-
-  @include vp-1439 {
-    max-width: none;
-  }
-}
-
 .news-slide__container {
   width: 100%;
   max-width: 286px;
@@ -121,13 +105,10 @@
     mask-image: url("../__spritemap#sprite-icon-corner-view");
   }
 
-  //
   @include vp-1439 {
     padding-top: 12px;
     padding-bottom: 6px;
   }
-
-  //
 }
 
 .news-slide__head {
@@ -140,12 +121,8 @@
 
   @include vp-1439 {
     max-width: 207px;
-    padding-top: 11px;
-
-    //
     padding-top: 10px;
     padding-bottom: 6px;
-    //
   }
 
   @include vp-767 {
@@ -173,11 +150,8 @@
   @include vp-1439 {
     max-width: 240px;
     align-items: center;
-
-    //
     padding-top: 12px;
     padding-bottom: 15px;
-    //
   }
 
   @include vp-767 {
@@ -189,14 +163,6 @@
     padding-bottom: 0;
   }
 }
-
-// .news-slide--main .news-slide__date {}
-
-// .news-slide--travels .news-slide__date {}
-
-// .news-slide--volunteering .news-slide__date {}
-
-// .news-slide--career .news-slide__date {}
 
 .news-slide--main .news-slide__head {
   max-width: 426px;
@@ -216,11 +182,6 @@
   }
 }
 
-// .news-slide--travels .news-slide__head {}
-
-// .news-slide--volunteering .news-slide__head {}
-
-// .news-slide--career .news-slide__head {}
 .news-slide--volunteering .news-slide__row {
   max-width: 244px;
 
@@ -242,11 +203,6 @@
     padding-bottom: 9px;
   }
 }
-
-// .news-slide--travels .news-slide__row {}
-
-
-// .news-slide--career .news-slide__row {}
 
 .news-slide__content b {
   font-size: 12px;
@@ -317,7 +273,6 @@
     mask-size: 8px 8px;
   }
 
-  //
   @include vp-1439 {
     margin-top: 0;
   }
@@ -325,8 +280,6 @@
   @include vp-767 {
     margin-bottom: 1px;
   }
-
-  //
 }
 
 .news-slide__btn:hover:not(.disabled):not(:focus-visible):not(:active) {
