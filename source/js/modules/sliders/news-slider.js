@@ -182,9 +182,10 @@ const initNewsSlider = () => {
         spaceBetween: 16,
       },
       768: {
-        slidesPerView: 4,
+        // slidesPerView: 4,
+        slidesPerView: 'auto',
         slidesPerGroup: 4,
-        spaceBetween: 16,
+        spaceBetween: 0,
         grid: {
           rows: 2,
         },

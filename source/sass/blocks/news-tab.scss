@@ -99,7 +99,10 @@
   margin-bottom: 39px;
 
   @include vp-1439 {
-    margin-bottom: 29px;
+    //
+    // margin-bottom: 29px;
+    margin-top: 11px;
+    //
   }
 }
 
