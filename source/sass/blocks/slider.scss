@@ -1,0 +1,78 @@
+.slider__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 54px;
+  column-gap: 10px;
+
+  @include vp-767 {
+    max-width: 52px;
+  }
+}
+
+.slider__btn {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  background-color: $color-transparent;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $color-action;
+    transition: background-color $trans-default;
+    width: 10px;
+    height: 10px;
+    mask-image: url("../__spritemap#sprite-icon-slider-arrow-view");
+    mask-size: 10px 10px;
+  }
+
+  &--prev {
+    transform: rotate(180deg);
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $color-white;
+  }
+
+  &:hover:not(.is-disabled):not(:focus-visible):not(:active)::after {
+    background-color: rgba($color-action, 0.7);
+  }
+
+  &:active {
+    background-color: $color-white;
+  }
+
+  &:active::after {
+    background-color: rgba($color-action, 0.7);
+  }
+}
+
+.is-disabled {
+  pointer-events: none;
+
+  &::after {
+    background-color: $color-disabled;
+  }
+}
+
+.slider__scrollbar {
+  background-color: rgba($color-action, 0.2);
+  height: 2px;
+}
+
+.slider__drag-element {
+  height: 2px;
+  background-color: $color-action;
+}

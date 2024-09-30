@@ -1,0 +1,202 @@
+.btn {
+  border-radius: 30px;
+  min-height: 56px;
+  border: 1px solid $color-action;
+  background-color: $color-transparent;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color $trans-default;
+
+  &--menu {
+    cursor: pointer;
+    background-color: $color-white;
+    min-width: 136px;
+    padding: 4px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 2;
+    transition: background-color $trans-default, min-width $trans-default;
+
+    @include vp-767 {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      min-height: 54px;
+    }
+  }
+
+  &--link {
+    padding: 4px;
+    padding-left: 30px;
+    min-width: 199px;
+
+    @include vp-1439 {
+      min-width: 198px;
+      padding: 4px;
+      padding-left: 30px;
+    }
+
+    @include vp-767 {
+      min-width: 154px;
+      padding-left: 20px;
+    }
+  }
+
+  &--form {
+    border-color: $color-white;
+  }
+
+  @include vp-767 {
+    min-height: 44px;
+  }
+}
+
+.btn b {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-action;
+  transition: color $trans-default;
+}
+
+.btn--link b {
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
+}
+
+.btn--form b {
+  color: $color-white;
+}
+
+.btn span:not(.visually-hidden) {
+  background-color: $color-action;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  position: relative;
+  transition: background-color $trans-default;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $color-white;
+    transition: background-color $trans-default;
+  }
+}
+
+.btn--link span {
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.btn--form span {
+  background-color: $color-white;
+}
+
+.btn--form span::after {
+  background-color: $color-action;
+}
+
+.btn--link span::after,
+.btn--form span::after {
+  width: 8px;
+  height: 8px;
+  mask-image: url("../__spritemap#sprite-icon-btn-arrow-view");
+  mask-size: 8px 8px;
+}
+
+.btn--menu span::after {
+  width: 16px;
+  height: 8px;
+  mask-image: url("../__spritemap#sprite-icon-menu-view");
+  mask-size: 14.4px 6.4px;
+}
+
+.is-open.btn--menu {
+  background-color: $color-action;
+  min-width: 286px;
+  transition: background-color $trans-default, min-width $trans-default;
+}
+
+.is-open.btn--menu b {
+  color: $color-white;
+  transition: color $trans-default;
+}
+
+.is-open.btn--menu span {
+  background-color: $color-white;
+  transition: background-color $trans-default;
+
+  &::after {
+    background-color: $color-action;
+    width: 20px;
+    height: 20px;
+    mask-image: url("../__spritemap#sprite-icon-cross-view");
+    mask-size: 16px 16px;
+    transition: background-color $trans-default;
+  }
+}
+
+.btn--link:hover:not(.disabled):not(:focus-visible):not(:active) {
+  background-color: $color-action;
+  transition: background-color $trans-default;
+}
+
+.btn--link:active {
+  background-color: $color-action;
+  transition: background-color $trans-default, opacity $trans-default;
+  opacity: 0.7;
+}
+
+.btn--link:focus span::after,
+.btn--link:focus-visible span::after {
+  transform: rotate(45deg) translateX(-4px);
+  transform-origin: center center;
+}
+
+.btn--link.disabled {
+  pointer-events: none;
+  border-color: $color-disabled;
+}
+
+.btn--link.disabled b {
+  color: $color-disabled;
+}
+
+.btn--link.disabled span {
+  background-color: $color-disabled;
+}
+
+.btn--link:hover:not(.disabled):not(:focus-visible):not(:active) b,
+.btn--link:active b {
+  color: $color-white;
+  transition: color $trans-default;
+}
+
+.btn--link:hover:not(.disabled):not(:focus-visible):not(:active) span,
+.btn--link:active span {
+  background-color: $color-white;
+  transition: background-color $trans-default;
+}
+
+.btn--link:hover:not(.disabled):not(:focus-visible):not(:active) span::after,
+.btn--link:active span::after {
+  background-color: $color-action;
+  transform: rotate(45deg) translateX(-4px);
+  transform-origin: center center;
+  transition: background-color $trans-default;
+}
